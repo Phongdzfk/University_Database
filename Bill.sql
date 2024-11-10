@@ -1,11 +1,11 @@
-CREATE TABLE bill (
-  Bill_ID varchar(55) NOT NULL,
-  Bill_Type varchar(55) NOT NULL,
+CREATE TABLE Bill (
+  Bill_ID CHAR(10) NOT NULL,
+  Bill_Type VARCHAR(20) NOT NULL,
   Amount_Due int NOT NULL,
-  Due_Date varchar(55) NOT NULL,
-  Payment_Status varchar(55) NOT NULL,
-  StudentID varchar(55) NOT NULL,
-  PersonalID_O varchar(55) NOT NULL,
+  Due_Date CHAR(10) NOT NULL,
+  Payment_Status VARCHAR(20) NOT NULL,
+  StudentID CHAR(10) NOT NULL,
+  PersonalID_O CHAR(12) NOT NULL,
   PRIMARY KEY (Bill_ID),
   KEY StudentID (StudentID),
   KEY PersonalID_O (PersonalID_O),
