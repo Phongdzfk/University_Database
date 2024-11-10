@@ -1,5 +1,5 @@
 CREATE TABLE university_domitory.Dormitory_Staff(
-	PersonalID VARCHAR(55) NOT NULL,
+    PersonalID VARCHAR(55) NOT NULL,
     firstName VARCHAR(55) NOT NULL,
     middleName VARCHAR(55) NOT NULL,
     lastName VARCHAR(55) NOT NULL, 
