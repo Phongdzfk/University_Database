@@ -4,7 +4,6 @@ CREATE TABLE university_domitory.Dormitory_Staff(
     middleName VARCHAR(55) NOT NULL,
     lastName VARCHAR(55) NOT NULL, 
     Salary integer NOT NULL,
-    PhoneNumber VARCHAR(55) NOT NULL,
     Email VARCHAR(55) NOT NULL,
     Address VARCHAR(55) NOT NULL,
     State VARCHAR(55) NOT NULL,
