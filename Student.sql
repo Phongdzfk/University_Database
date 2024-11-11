@@ -10,8 +10,8 @@ CREATE TABLE student (
   EmailAddress varchar(55) NOT NULL
 );
 
-INSERT INTO student
-VALUES("SV001","Dang","Truong","An","2004-02-01", "Ha Noi","Nam","0239873421","AnDT@stu.ptit.edu.vn"),
+INSERT INTO student VALUES
+("SV001","Dang","Truong","An","2004-02-01", "Ha Noi","Nam","0239873421","AnDT@stu.ptit.edu.vn"),
 ("SV002","Hoang","Thuc","Anh","2004-03-01","Ha Noi","Nu","023983231","AnhHT@stu.ptit.edu.vn"),
 ("SV003","Le","Tuan","Anh","2004-02-12","Hai Phong","Nam","091233432","AnhLT@stu.ptit.edu.vn"),
 ("SV004","Luong","Phuong","Anh","2004-03-12","Hoa Binh","Nu","098232455","AnhLP@stu.ptit.edu.vn"),
@@ -20,5 +20,45 @@ VALUES("SV001","Dang","Truong","An","2004-02-01", "Ha Noi","Nam","0239873421","A
 ("SV007","Duong","Gia","Bao","2004-04-03","Ha Noi","Nam","0932261875","BaoDG@stu.ptit.edu.vn"),
 ("SV008","Le","Gia","Bao","2004-09-07","Ha Noi","Nam","0915218765","BaoLB@stu.ptit.edu.vn"),
 ("SV009","Nguyen","Thuy","Chi","2004-02-12","Thai Nguyen","Nu","098122134","ChiNT@stu.ptit.edu.vn"),
-("SV010","Ha","Minh","Duy","2004-08-07","Thanh Hoa","Nam","091675433","DuyHM@stu.ptit.edu.vn")
+("SV010","Ha","Minh","Duy","2004-08-07","Thanh Hoa","Nam","091675433","DuyHM@stu.ptit.edu.vn"),
+("SV011","Hoang","Duc","Duy","2004-03-11","Hai Phong","Nam","0866122323","DuyHD@stu.ptit.edu.vn"),
+("SV012","Nguyen","Tuan","Duong","2004-08-12","Phu Tho","Nam","092123344","DuongNM@stu.ptit.edu.vn"),
+("SV013","Nguyen","Huy","Duong","2004-09-13","Lang Son","Nam","0866012233","DuongNH@stu.ptit.edu.vn"),
+("SV014","Ha","Tuan","Dat","2004-09-12","Lao Cai","Nam","091342347","DatHT@stu.ptit.edu.vn"),
+("SV015","Ha","Manh","Duc","2004-09-08","Dien Bien","Nam","0979865344","DucMH@stu.ptit.edu.vn"),
+("SV016","Le","Thi Thanh","Hang","2002-12-03","Quang Ninh","Nu","0877123233","HangLTT@stu.ptit.edu.vn"),
+("SV017","Duong","Minh","Hieu","2003-04-12","Vinh Phuc","Nam","0988786122","HieuDM@stu.ptit.edu.vn"),
+("SV018","Mai","Tuan","Hung","2001-09-09","Ha Noi","Nam","0988122323","HungMT@stu.ptit.edu.vn"),
+("SV019","Nguyen","Ngoc","Huy","2005-03-03","Ha Nam","Nam","0877633233","HuyNN@stu.ptit.edu.vn"),
+("SV020","Nguyen","Thanh","Hung","2002-09-19","Hoa Binh","Nam","0988712232","HungNT@stu.ptit.edu.vn"),
+("SV021","Le","Anh","Duc","2003-09-18","Ha Noi","Nam","0877655323","DucLA@stu.ptit.edu.vn"),
+("SV022","Nguyen","Bao","Linh","2004-09-27","Ha Noi","Nu","091233231","LinhNB@stu.ptit.edu.vn");
+("SV023","Bui","Nam","Khanh","2003-07-07","Hai Phong", "Nam","036566476","KhanhBN@stu.ptit.edu.vn"),
+("SV024","Vu","Quoc","Khanh","2004-09-17","Hai Duong","Nam","0988761233","KhanhVQ@stu.ptit.edu.vn"),
+("SV025","Nguyen","Tuan","Minh","2001-02-12","Hung Yen","Nam","0988733233","MinhNT@stu.ptit.edu.vn"),
+("SV026","Phung","Hai","Linh","2005-07-12","Ha Noi","Nu","0866455342","LinhPh@stu.ptit.edu.vn"),
+("SV027","Bui","Phuong","Linh","2005-09-09","Ha Noi","Nu","039564322","LinhBP@stu.ptit.edu.vn"),
+("SV028","Nguyen","Thuy","Linh","2004-08-21","Hai Duong","Nu","0981233478","LinhNT@stu.ptit.edu.vn"),
+("SV029","Le","Hoang","Loc","2004-10-09","Hoa Binh","Nam","0876433233","LocLH@stu.ptit.edu.vn"),
+("SV030","Doan","Le","Minh","2004-07-19","Ha Noi","Nam","0988744322","MinhDL@stu.ptit.edu.vn"),
+("SV031","Tran","Nhat","Minh","2004-09-29","Ha Noi","Nam","0866122344","MinhTN@stu.ptit.edu.vn"),
+("SV032","Nguyen","Thi Quynh","Anh","2005-06-30","Thai Nguyen","Nu","0988783455","AnhNTQ@stu.ptit.edu.vn"),
+("SV033","Nguyen","Hai","Nam","2004-09-12","Ha Noi","Nam","091212333","NamNH@stu.ptit.edu.vn"),
+("SV034","Le","Hai","Dang","2005-10-07","Thanh Hoa","Nam","0964343233","DangLH@stu.ptit.edu.vn"),
+("SV035","Le","Tien","Son","2004-11-20","Nghe An","Nam","0973234564","SonLT@stu.ptit.edu.vn"),
+("SV036","Duong","Thuy","Hien","2005-09-02","Ha Noi","Nu","0912133235","HienDT@stu.ptit.edu.vn"),
+("SV037","Pham","Thi","Giang","2003-10-10","Thai Binh","Nu","0866563230","GiangPT@stu.ptit.edu.vn"),
+("SV038","Nguyen","Thi Thanh","Huong","2002-04-15","Phu Tho","Nu","0983235451","HuongNTT@stu.ptit.edu.vn"),
+("SV039","Le","Phuong","Trang","2004-02-29","Nam Dinh","Nu","0912344543","TrangLP@stu.ptit.edu.vn"),
+("SV040","Pham","Huu","Tien","2004-10-29","Ha Noi","Nam","093122344","TienPH@stu.ptit.edu.vn"),
+("SV041","Nguyen","Anh","Tu","2004-01-25","Ha Nam","Nam","0953122876","TuNA@stu.ptit.edu.vn"),
+("SV042","Nguyen","Thanh","Tung","2004-11-12","Ha Noi","Nam","0915217656","TungNT@stu.ptit.edu.vn"),
+("SV043","Nguyen","Anh","Vu","2000-12-02","Bac Ninh","Nam","0987324356","VuNA@stu.ptit.edu.vn"),
+("SV044","Dinh","Diem","Quynh","2003-09-12","Ha Tinh","Nu","091523432","QuynhDD@stu.ptit.edu.vn"),
+("SV045","Hoang","Minh","Hai","2005-09-01","Ha Noi","Nam","0866343255","HaiHM@stu.ptit.edu.vn"),
+("SV046", "Nguyen","Duc","Kien","2005-07-01","Thai Binh","Nam","0982343255","KienND@stu.ptit.edu.vn"),
+("SV047","Nguyen","Binh","Minh","2004-08-09","Ha Noi","Nam","0915216783","MinhNB@stu.ptit.edu.vn"),
+("SV048","Nguyen","Anh","Duc","2003-03-07","Hai Duong","Nam","0963233455","DucNA@stu.ptit.edu,vn"),
+("SV049","Tran","Tuan","Vu","2004-12-13","Nam Dinh","Nam","0963122344","VuTT@stu.ptit.edu.vn"),
+("SV050","Do","Khanh","Vy","2004-11-10","Ha Noi","Nu","0912988433","VyDK@stu.ptit.edu.vn")
 
