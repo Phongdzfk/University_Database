@@ -9,7 +9,7 @@ CREATE TABLE student (
   phoneNumber varchar(55) NOT NULL,
   EmailAddress varchar(55) NOT NULL
 );
-
+--
 INSERT INTO student VALUES
 ("SV001","Dang","Truong","An","2004-02-01", "Ha Noi","Nam","0239873421","AnDT@stu.ptit.edu.vn"),
 ("SV002","Hoang","Thuc","Anh","2004-03-01","Ha Noi","Nu","023983231","AnhHT@stu.ptit.edu.vn"),
