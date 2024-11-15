@@ -11,6 +11,6 @@ CREATE TABLE dormitory (
 ) 
 
 INSERT INTO dormitory (Dormitory_ID, Location, Number_of_Floors, Number_of_Rooms, Overall_Condition, PersonalID_G) VALUES 
-('A', 'Phía Đông Học Viện', 3, 9, 'New', ‘G01’),
-('B', 'Phía Nam Học Viện', 5, 10, 'Old', ’G02’),
-('C', 'Phía Bắc Học Viện', 2, 7, 'Stable', ‘G03’);
+('A', 'Phía Đông Học Viện', 3, 9, 'Mới', '000001'),
+('B', 'Phía Nam Học Viện', 5, 10, 'Cũ', '000002'),
+('C', 'Phía Bắc Học Viện', 2, 7, 'Ổn định', '000003');
