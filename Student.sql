@@ -32,7 +32,7 @@ INSERT INTO student VALUES
 ("SV019","Nguyen","Ngoc","Huy","2005-03-03","Ha Nam","Nam","0877633233","HuyNN@stu.ptit.edu.vn"),
 ("SV020","Nguyen","Thanh","Hung","2002-09-19","Hoa Binh","Nam","0988712232","HungNT@stu.ptit.edu.vn"),
 ("SV021","Le","Anh","Duc","2003-09-18","Ha Noi","Nam","0877655323","DucLA@stu.ptit.edu.vn"),
-("SV022","Nguyen","Bao","Linh","2004-09-27","Ha Noi","Nu","091233231","LinhNB@stu.ptit.edu.vn");
+("SV022","Nguyen","Bao","Linh","2004-09-27","Ha Noi","Nu","091233231","LinhNB@stu.ptit.edu.vn"),
 ("SV023","Bui","Nam","Khanh","2003-07-07","Hai Phong", "Nam","036566476","KhanhBN@stu.ptit.edu.vn"),
 ("SV024","Vu","Quoc","Khanh","2004-09-17","Hai Duong","Nam","0988761233","KhanhVQ@stu.ptit.edu.vn"),
 ("SV025","Nguyen","Tuan","Minh","2001-02-12","Hung Yen","Nam","0988733233","MinhNT@stu.ptit.edu.vn"),
