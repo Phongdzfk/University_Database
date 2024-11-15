@@ -7,4 +7,4 @@ CREATE TABLE dormitory_manager (
 INSERT INTO dormitory_manager VALUES
 ('000004','M01'),
 ('000005','M02'),
-('000006','M03')
+('000006','M03');
