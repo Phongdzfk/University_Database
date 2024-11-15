@@ -3,6 +3,7 @@ CREATE TABLE university_domitory.Student_Emegency_Contact(
      StudentID VARCHAR(55) NOT NULL,
      FOREIGN KEY (StudentID) REFERENCES student(StudentID)
 );
+--
 INSERT INTO student_emegency_contact (Emergency_Contact, StudentID) VALUES
 ('0912345678', 'SV001'),
 ('0987654321', 'SV001'),
