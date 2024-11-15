@@ -9,3 +9,8 @@ CREATE TABLE dormitory (
   KEY PersonalID_G (PersonalID_G),
   FOREIGN KEY (PersonalID_G) REFERENCES guard (PersonalID_G)
 ) 
+
+INSERT INTO dormitory (Dormitory_ID, Location, Number_of_Floors, Number_of_Rooms, Overall_Condition, PersonalID_G) VALUES 
+('A', 'Phía Đông Học Viện', 3, 9, 'New', ‘G01’),
+('B', 'Phía Nam Học Viện', 5, 10, 'Old', ’G02’),
+('C', 'Phía Bắc Học Viện', 2, 7, 'Stable', ‘G03’);
