@@ -11,6 +11,7 @@ CREATE TABLE university_domitory.Dormitory_Staff(
     staffType VARCHAR(55) NOT NULL,
     PRIMARY KEY(PersonalID)
 );
+--
 INSERT INTO dormitory_staff (personalID,firstName,middleName,lastName,salary,email, address,state,dormitory_assigned,staffType) VALUES
 ('000001', 'Nguyen', 'Van', 'Bao', 10000000, 'bao.nguyen@gmail.com', '123 Duong A, Ha Noi', 'Dang lam viec', 'A', 'Guard'),
 ('000002', 'Tran', 'Thi', 'An', 10000000, 'an.tran@gmail.com', '456 Duong B, Ha Noi', 'Dang lam viec', 'B', 'Guard'),
