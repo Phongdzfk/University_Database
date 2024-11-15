@@ -4,7 +4,7 @@ CREATE TABLE room (
   Condition_of_Room varchar(55) NOT NULL,
   Capacity int NOT NULL,
   Gender int NOT NULL,
-  PersonalID_O varchar(55) NOT NULL,
+  Dormitory_ID varchar(55) NOT NULL,
   PRIMARY KEY (Room_ID),
-  FOREIGN KEY (PersonalID_O) REFERENCES office_staff (PersonalID_O)
+  FOREIGN KEY (Dormitory_ID) REFERENCES Dormitory (Dormitory_ID)
 ) 
