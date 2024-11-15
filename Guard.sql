@@ -4,6 +4,7 @@ CREATE TABLE guard (
   PRIMARY KEY (PersonalID_G),
   FOREIGN KEY (PersonalID_G) REFERENCES dormitory_staff (PersonalID)
 );
+--
 INSERT INTO guard VALUES
 ('G01','000001'),
 ('G02','000002'),
