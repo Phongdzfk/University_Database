@@ -4,6 +4,7 @@ CREATE TABLE office_staff (
   PRIMARY KEY (PersonalID_O),
   FOREIGN KEY (PersonalID_O) REFERENCES dormitory_staff (PersonalID)
 );
+--
 INSERT INTO Office_Staff VALUES
 ('O01','000007'),
 ('O02','000008'),
