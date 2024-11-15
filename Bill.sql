@@ -12,6 +12,7 @@ CREATE TABLE bill (
   FOREIGN KEY (StudentID) REFERENCES student (StudentID),
   FOREIGN KEY (PersonalID_O) REFERENCES office_staff (PersonalID_O)
 ) 
+  --
 INSERT INTO bill VALUES 
 ('B001','Điện',500000,'2024-12-15','Chưa thanh toán','SV001','000007'),
 ('B002','Nước',200000,'2024-12-20','Đã thanh toán','SV002','000008'),
