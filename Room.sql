@@ -6,7 +6,7 @@ CREATE TABLE room (
   Gender VARCHAR(55) NOT NULL,
   PersonalID_O varchar(55) NOT NULL,
   PRIMARY KEY (Room_ID),
-  FOREIGN KEY (Dormitory_ID) REFERENCES Dormitory (Dormitory_ID)
+  FOREIGN KEY (PersonalID_O) REFERENCES Office_staff (PersonalID_O)
 ) 
 
 INSERT INTO room (Room_ID, number_of_Students, Condition_of_Room, Capacity, Gender, PersonalID_O) VALUES 
