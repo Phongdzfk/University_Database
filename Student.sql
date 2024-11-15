@@ -59,7 +59,7 @@ VALUES
 ('SV043', 'Nguyen', 'Duong', 'Tuan', '2000-12-10', 'Hanoi', 'Nam', '0987654347', 'TuanND@stu.ptit.edu.vn'),
 ('SV044', 'Hoang', 'Kien', 'Cao', '2001-08-23', 'Hanoi', 'Nam', '0987654348', 'CaoHK@stu.ptit.edu.vn'),
 ('SV045', 'Tran', 'Thi', 'Tuan', '2002-06-05', 'Hanoi', 'Nam', '0987654349', 'TuanTT@stu.ptit.edu.vn'),
-('SV046', 'Nguyen', 'Tuan', 'Hoang', '2001-03-17', 'Hanoi', 'Nam', '0987654350', 'HoangNT@stu.ptit.edu.vn');
+('SV046', 'Nguyen', 'Tuan', 'Hoang', '2001-03-17', 'Hanoi', 'Nam', '0987654350', 'HoangNT@stu.ptit.edu.vn'),
 ('SV047', 'Bui', 'Phong', 'Hieu', '2000-06-14', 'Hanoi', 'Nam', '0987654351', 'HieuBP@stu.ptit.edu.vn'),
 ('SV048', 'Nguyen', 'Hoang', 'Khai', '2002-09-29', 'Hanoi', 'Nam', '0987654352', 'KhaiNH@stu.ptit.edu.vn'),
 ('SV049', 'Tran', 'Viet', 'Kien', '2001-11-16', 'Hanoi', 'Nam', '0987654353', 'KienTV@stu.ptit.edu.vn'),
