@@ -65,10 +65,10 @@ ORDER BY ds.PersonalID, st.StudentID;
 SELECT 
     r.Room_ID,
     r.number_of_Students,
-    r.Condition_of_Room,
+    r.Size_of_Room,
     r.Capacity,
     r.Gender,
-    r.PersonalID_O,
+    r.Dormitory_ID,
     CASE
         WHEN f.itemName IS NULL
              AND (i.itemName IS NULL OR i.itemName != 'Quạt' OR i.Quantity < r.number_of_Students)
