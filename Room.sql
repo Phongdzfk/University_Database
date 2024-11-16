@@ -21,8 +21,8 @@ INSERT INTO room (Room_ID, number_of_Students, Condition_of_Room, Capacity, Gend
 ('304-A', 2, 'Nhỏ', 3, 'Nam', 'A');
 
 INSERT INTO room (Room_ID, number_of_Students, Condition_of_Room, Capacity, Gender, Dormitory_ID) VALUES 
-('101-B', 2, 'Nhỏ', 3, 'Nam', 'B'), 
-('102-B', 1, 'Nhỏ', 3, 'Nữ', 'B'), 
+('101-B', 3, 'Nhỏ', 3, 'Nam', 'B'), 
+('102-B', 0, 'Nhỏ', 3, 'Nữ', 'B'), 
 ('201-B', 2, 'Nhỏ', 3, 'Nữ', 'B'), 
 ('202-B', 1, 'Nhỏ', 3, 'Nam', 'B'), 
 ('301-B', 1, 'Nhỏ', 3, 'Nữ', 'B'), 
