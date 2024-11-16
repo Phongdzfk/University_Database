@@ -62,7 +62,7 @@ GROUP BY ds.PersonalID, st.StudentID
 ORDER BY ds.PersonalID, st.StudentID;
 
 --Query 3
-SELECT 
+SELECT DISTINCT 
     r.Room_ID,
     r.number_of_Students,
     r.Size_of_Room,
@@ -76,8 +76,8 @@ SELECT
         ELSE 'Đủ'
     END AS cooling_status,
     CASE
+		WHEN r.number_of_Students = 0 THEN 'Trống'
 		WHEN r.Capacity > number_of_Students THEN 'Còn chỗ'
-        WHEN r.Capacity = 0 THEN 'Trống'
         ElSE 'Đầy'
 	END AS occupancy_status
 FROM 
@@ -85,4 +85,5 @@ FROM
 LEFT JOIN 
     include i ON r.Room_ID = i.Room_ID
 LEFT JOIN 
-    facility f ON r.Room_ID = f.Room_ID AND f.itemName = 'Điều hòa';
+    facility f ON r.Room_ID = f.Room_ID AND f.itemName = 'Điều hòa'
+ORDER BY Room_ID;
