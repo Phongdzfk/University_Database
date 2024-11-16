@@ -181,24 +181,3 @@ JOIN include i ON r.Room_ID = i.Room_ID
 JOIN facility f ON i.Room_ID = f.Room_ID AND i.itemName = f.itemName
 ORDER BY r.Room_ID;
 
---Query 2
-SELECT 
-    r.Room_ID,
-    r.number_of_Students,
-    r.Condition_of_Room,
-    r.Capacity,
-    r.Gender,
-    r.PersonalID_O,
-    CASE
-        -- If the room does not have an air conditioner
-        WHEN f.itemName IS NULL
-             AND (i.itemName IS NULL OR i.itemName != 'Quạt' OR i.Quantity < r.number_of_Students)
-        THEN 'Insufficient'
-        ELSE 'Sufficient'
-    END AS status
-FROM 
-    room r
-LEFT JOIN 
-    include i ON r.Room_ID = i.Room_ID
-LEFT JOIN 
-    facility f ON r.Room_ID = f.Room_ID AND f.itemName = 'Điều hòa';
