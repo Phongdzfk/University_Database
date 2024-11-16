@@ -1,4 +1,5 @@
 --Query 1
+
 WITH BillCounts AS (
     SELECT 
         StudentID,
@@ -19,10 +20,10 @@ SELECT
            COALESCE(s.lastName, '')) AS fullName,
     l.Room_ID,
     c.ContractID,
+    bc.NumberOfBills,
     bc.Total_Amount,
     bc.Unpaid_Amount,
-    l.PersonalID_DM,
-    bc.NumberOfBills,
+    l.PersonalID_DM AS Manager_ID,
     (SELECT COUNT(*) FROM send se2 WHERE se2.StudentID = s.StudentID) AS NumberOfRequests
 FROM student s
 LEFT JOIN BillCounts bc ON bc.StudentID = s.StudentID
