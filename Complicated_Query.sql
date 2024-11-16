@@ -43,7 +43,7 @@ GROUP BY
     bc.NumberOfBills
 ORDER BY s.StudentID;
 
--- Query 2
+--Query 2
 SELECT DISTINCT 
     ds.PersonalID, 
     ds.Dormitory_Assigned AS staffDormitory,
@@ -60,3 +60,24 @@ LEFT JOIN dormitory_staff_phonenumber dsp ON ds.PersonalID = dsp.PersonalID
 WHERE ds.staffType = 'Manager'
 GROUP BY ds.PersonalID, st.StudentID
 ORDER BY ds.PersonalID, st.StudentID;
+
+--Query 3
+SELECT 
+    r.Room_ID,
+    r.number_of_Students,
+    r.Condition_of_Room,
+    r.Capacity,
+    r.Gender,
+    r.PersonalID_O,
+    CASE
+        WHEN f.itemName IS NULL
+             AND (i.itemName IS NULL OR i.itemName != 'Quạt' OR i.Quantity < r.number_of_Students)
+        THEN 'Insufficient'
+        ELSE 'Sufficient'
+    END AS status
+FROM 
+    room r
+LEFT JOIN 
+    include i ON r.Room_ID = i.Room_ID
+LEFT JOIN 
+    facility f ON r.Room_ID = f.Room_ID AND f.itemName = 'Điều hòa';
