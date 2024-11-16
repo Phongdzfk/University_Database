@@ -163,3 +163,21 @@ INSERT INTO Bill  VALUES
 ('B148','Bao tri',30000,'2024-12-05','Da thanh toan','SV048','000010'),
 ('B149','Phat',260000,'2024-12-15','Chua thanh toan','SV049','000011'),
 ('B150','Tien phong',3500000,'2024-12-10','Da thanh toan','SV050','000012');
+
+
+--Query 1
+SELECT 
+    b.Bill_ID,
+    b.Bill_Type,
+    b.Amount_Due,
+    s.StudentID,
+    s.LastName,
+    s.EmailAddress AS StudentEmail,
+    s.phoneNumber AS StudentPhoneNumber
+FROM 
+    bill b
+JOIN 
+    student s ON b.StudentID = s.StudentID
+WHERE 
+    b.Payment_Status <> 'Đã thanh toán'
+    AND b.Due_Date > CURDATE();
