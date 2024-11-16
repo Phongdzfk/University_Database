@@ -58,3 +58,12 @@ VALUES
   ('SV048', '501-B', '000005'),
   ('SV049', '501-B', '000005'),
   ('SV050', '502-B', '000005');
+
+-- Query 1:
+SELECT StudentID,Room_ID FROM Live 
+WHERE Room_ID LIKE '101%';
+
+-- Query 2: 
+SELECT StudentID,Room_ID FROM Live 
+WHERE PersonalID_DM = '000004'; 
+
