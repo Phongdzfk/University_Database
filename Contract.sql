@@ -68,10 +68,10 @@ INSERT INTO Contract (ContractID, Contract_Start_Date, Contract_End_Date, Contra
 SELECT ContractID, Contract_Start_Date, Contract_End_Date,Penalty_for_Violation,PersonalID_O, StudentID FROM Contract
 WHERE Contract_Status = 'Hoat Dong'; -- Query 1
 
-SELECT ContractID, Contract_Start_Date, Contract_End_Date,Contract_Status,PersonalID_O, StudentID FROM Contract
+SELECT ContractID,Contract_Start_Date, Contract_End_Date,Contract_Status,PersonalID_O, StudentID FROM Contract
 WHERE Penalty_for_Violation = 'Dinh Chi'; -- Query 2
 
-SELECT ContractID,Contract_End_Date,Contract_Status,Penalty_for_Violation,PersonalID_O, StudentID FROM Contract
+SELECT ContractID,Contract_Start_Date,Contract_End_Date,Contract_Status,Penalty_for_Violation,PersonalID_O, StudentID FROM Contract
 WHERE Contract_Start_Date BETWEEN '2024-01-01' AND '2024-03-31'; -- Query 3
 
 
