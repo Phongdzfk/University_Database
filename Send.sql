@@ -28,3 +28,9 @@ INSERT INTO send (StudentID, PersonalID_DM, RequestID, Send_Date) VALUES
 ('SV018', '000006', 'RQ018', '2024-10-09'),
 ('SV019', '000004', 'RQ019', '2024-10-10'),
 ('SV021', '000005', 'RQ020', '2024-10-11');
+
+-- Query 1 
+SELECT r.*, s.StudentID, s.PersonalID_DM AS ManagerID, s.Send_Date
+FROM Request r
+JOIN Send s ON r.RequestID = s.RequestID;
+
