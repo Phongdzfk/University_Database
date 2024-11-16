@@ -28,32 +28,34 @@ INSERT INTO dormitory_staff (personalID,firstName,middleName,lastName,salary,ema
 
 --Query 1
 SELECT 
-    PersonalID,
-    firstName,
-    middleName,
-    lastName,
-    Salary,
-    Email,
-    Address,
-    State,
-    staffType
-FROM 
-    dormitory_staff
-WHERE 
-    Dormitory_Assigned = 'A';
+    ds.PersonalID, 
+    ds.firstName, 
+    ds.middleName, 
+    ds.lastName, 
+    ds.salary, 
+    ds.email, 
+    ds.address, 
+    ds.state, 
+    ds.Dormitory_Assigned, 
+    GROUP_CONCAT(DISTINCT dsp.phoneNumber) AS phoneNumbers
+FROM dormitory_staff ds
+JOIN dormitory_staff_phonenumber dsp ON ds.PersonalID = dsp.PersonalID
+WHERE ds.Dormitory_Assigned = 'A'
+GROUP BY ds.PersonalID;
 
 --Query 2
 SELECT 
-    PersonalID,
-    firstName,
-    middleName,
-    lastName,
-    Salary,
-    Email,
-    Address,
-    State,
-    Dormitory_Assigned
-FROM 
-    dormitory_staff
-WHERE 
-    staffType = 'Office Staff';
+    ds.PersonalID, 
+    ds.firstName, 
+    ds.middleName, 
+    ds.lastName, 
+    ds.salary, 
+    ds.email, 
+    ds.address, 
+    ds.state, 
+    ds.Dormitory_Assigned, 
+    GROUP_CONCAT(DISTINCT dsp.phoneNumber) AS phoneNumbers
+FROM dormitory_staff ds
+JOIN dormitory_staff_phonenumber dsp ON ds.PersonalID = dsp.PersonalID
+WHERE ds.staffType = 'Office Staff'
+GROUP BY ds.PersonalID;
