@@ -28,3 +28,7 @@ INSERT INTO Request (RequestID, Content, Type_of_Request, Status_of_Request, Com
 ('RQ019', 'Sua loi may giat', 'Thiet bi', 'Hoan thanh', '2024-11-04'),
 ('RQ020', 'Bao tri quat', 'Bao tri', 'Dang xu ly', 'none');
 
+--Query 1
+SELECT * 
+FROM request
+WHERE Status_of_Request != 'Hoan thanh';
