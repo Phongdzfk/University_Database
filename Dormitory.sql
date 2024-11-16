@@ -14,3 +14,13 @@ INSERT INTO dormitory (Dormitory_ID, Location, Number_of_Floors, Number_of_Rooms
 ('A', 'Phía Đông Học Viện', 3, 9, 'Mới', '000001'),
 ('B', 'Phía Nam Học Viện', 5, 10, 'Cũ', '000002'),
 ('C', 'Phía Bắc Học Viện', 2, 7, 'Ổn định', '000003');
+
+ -- Query 1:
+SELECT Dormitory_ID, Location, Number_of_Rooms from dormitory
+WHERE Number_of_Rooms = (SELECT MAX(Number_of_Rooms) from dormitory);
+
+-- Query 2:
+SELECT PersonalID,firstName,lastName,Salary,Email,Address,State,Dormitory_Assigned,staffType from dormitory_staff
+JOIN dormitory
+ON PersonalID = dormitory.PersonalID_G
+WHERE dormitory.Dormitory_ID = 'A';
