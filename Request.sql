@@ -32,3 +32,13 @@ INSERT INTO Request (RequestID, Content, Type_of_Request, Status_of_Request, Com
 SELECT * 
 FROM request
 WHERE Status_of_Request != 'Hoan thanh';
+
+--Query 2
+SELECT
+    s.StudentID,
+    CONCAT(s.firstName, ' ', s.middleName, ' ', s.lastName) AS StudentName,
+    r.*
+FROM request r
+JOIN send se ON se.RequestID = r.RequestID
+JOIN student s ON s.StudentID = se.StudentID
+ORDER BY r.RequestID;
