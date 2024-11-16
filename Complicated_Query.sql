@@ -7,11 +7,12 @@ SELECT
     SUM(b.Amount_Due) AS Total_Amount,
     SUM(CASE WHEN b.Payment_Status = 'Chua thanh toan' THEN b.Amount_Due ELSE 0 END) AS Unpaid_Amount,
     l.PersonalID_DM,
+    COUNT(Bill_ID) AS NumberOfBills,
     CASE 
         WHEN se.RequestID IS NOT NULL THEN 'Yes'
         ELSE 'No'
     END AS HasRequest
-FROM student s
+FROM student 
 JOIN contract c ON s.StudentID = c.StudentID
 JOIN bill b ON b.StudentID = s.StudentID
 JOIN live l ON l.StudentID = s.StudentID
