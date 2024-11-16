@@ -72,9 +72,14 @@ SELECT
     CASE
         WHEN f.itemName IS NULL
              AND (i.itemName IS NULL OR i.itemName != 'Quạt' OR i.Quantity < r.number_of_Students)
-        THEN 'Insufficient'
-        ELSE 'Sufficient'
-    END AS status
+        THEN 'Thiếu'
+        ELSE 'Đủ'
+    END AS cooling_status,
+    CASE
+		WHEN r.Capacity > number_of_Students THEN 'Còn chỗ'
+        WHEN r.Capacity = 0 THEN 'Trống'
+        ElSE 'Đầy'
+	END AS occupancy_status
 FROM 
     room r
 LEFT JOIN 
