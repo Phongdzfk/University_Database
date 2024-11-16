@@ -26,8 +26,8 @@ SELECT
     (SELECT COUNT(*) FROM send se2 WHERE se2.StudentID = s.StudentID) AS NumberOfRequests
 FROM student s
 LEFT JOIN BillCounts bc ON bc.StudentID = s.StudentID
-LEFT JOIN contract c ON s.StudentID = c.StudentID
-LEFT JOIN live l ON l.StudentID = s.StudentID
+JOIN contract c ON s.StudentID = c.StudentID
+JOIN live l ON l.StudentID = s.StudentID
 LEFT JOIN send se ON se.StudentID = s.StudentID  
 GROUP BY 
     s.StudentID, 
