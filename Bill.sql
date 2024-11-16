@@ -181,3 +181,33 @@ JOIN
 WHERE 
     b.Payment_Status <> 'Đã thanh toán'
     AND b.Due_Date > CURDATE();
+
+--Query 2
+SELECT 
+    b.Bill_ID,
+    os.StaffID,
+    ds.PersonalID,
+    ds.FirstName,
+    ds.LastName,
+    ds.Salary,
+    ds.StaffType
+FROM 
+    bill b
+JOIN 
+    office_staff os ON b.PersonalID_O = os.PersonalID_O
+JOIN 
+    dormitory_staff ds ON os.PersonalID_O = ds.PersonalID
+WHERE 
+    b.Bill_ID = 'B005';
+
+--Query 3
+SELECT 
+    b.Bill_ID,
+    b.Bill_Type,
+    b.Amount_Due,
+    b.Payment_Status,
+    b.Due_Date
+FROM
+    bill b
+WHERE 
+    b.StudentID = 'SV009';
