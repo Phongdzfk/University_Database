@@ -64,3 +64,21 @@ VALUES
 ('SV048', 'Nguyen', 'Hoang', 'Khai', '2002-09-29', 'Hanoi', 'Nam', '0987654352', 'KhaiNH@stu.ptit.edu.vn'),
 ('SV049', 'Tran', 'Viet', 'Kien', '2001-11-16', 'Hanoi', 'Nam', '0987654353', 'KienTV@stu.ptit.edu.vn'),
 ('SV050', 'Le', 'Minh', 'Thang', '2000-02-28', 'TPHCM', 'Nam', '0987654354', 'ThangLM@stu.ptit.edu.vn');
+
+-- Query 1: 
+ SELECT * FROM student
+ WHERE Gender = 'Nữ' AND Address = 'Hanoi' AND lastName >= 'N';
+
+-- Query 2:
+SELECT 
+    s.StudentID,
+    CONCAT(s.firstName, ' ', s.middleName, ' ', s.lastName) AS fullName,
+    GROUP_CONCAT(ec.Emergency_Contact ORDER BY ec.Emergency_Contact ASC SEPARATOR ', ') AS Emergency_Contacts
+FROM 
+    Student_Emegency_Contact ec
+JOIN 
+    student s ON ec.StudentID = s.StudentID
+GROUP BY 
+    s.StudentID, s.firstName, s.middleName, s.lastName;
+
+
