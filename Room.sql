@@ -1,7 +1,7 @@
 CREATE TABLE room (
   Room_ID varchar(55) NOT NULL,
   number_of_Students int NOT NULL,
-  Condition_of_Room varchar(55) NOT NULL,
+  Size_of_room varchar(55) NOT NULL,
   Capacity int NOT NULL,
   Gender VARCHAR(55) NOT NULL,
   Dormitory_ID varchar(55) NOT NULL,
