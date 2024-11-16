@@ -11,7 +11,8 @@ CREATE TABLE contract (
   KEY StudentID (StudentID),
   FOREIGN KEY (PersonalID_O) REFERENCES office_staff (PersonalID_O),
   FOREIGN KEY (StudentID) REFERENCES student (StudentID)
-);
+); 
+-- Update data
 INSERT INTO Contract (ContractID, Contract_Start_Date, Contract_End_Date, Contract_Status, Penalty_for_Violation, PersonalID_O, StudentID) VALUES
 ('CT001', '2024-01-01', '2024-12-31', 'Hoat Dong', 'Phat Tien', '000007', 'SV001'),
 ('CT002', '2024-02-01', '2024-12-31', 'Hoat Dong', 'Canh Cao', '000008', 'SV002'),
@@ -63,3 +64,14 @@ INSERT INTO Contract (ContractID, Contract_Start_Date, Contract_End_Date, Contra
 ('CT048', '2024-06-01', '2024-06-30', 'Hoat Dong', 'Phat Tien', '000012', 'SV048'),
 ('CT049', '2024-07-01', '2024-12-31', 'Hoat Dong', 'Phat Tien', '000007', 'SV049'),
 ('CT050', '2024-08-01', '2024-12-31', 'Hoat Dong', 'Canh Cao', '000008', 'SV050');
+-- Query
+SELECT ContractID, Contract_Start_Date, Contract_End_Date,Penalty_for_Violation,PersonalID_O, StudentID FROM Contract
+WHERE Contract_Status = 'Hoat Dong';
+
+SELECT ContractID, Contract_Start_Date, Contract_End_Date,Contract_Status,PersonalID_O, StudentID FROM Contract
+WHERE Penalty_for_Violation = 'Dinh Chi';
+
+SELECT ContractID,Contract_End_Date,Contract_Status,Penalty_for_Violation,PersonalID_O, StudentID FROM Contract
+WHERE Contract_Start_Date BETWEEN '2024-01-01' AND '2024-03-31';
+
+
