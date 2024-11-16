@@ -25,3 +25,35 @@ INSERT INTO dormitory_staff (personalID,firstName,middleName,lastName,salary,ema
 ('000010', 'Nguyen', 'Thi', 'Mai', 15000000, 'mai.nguyen@gmail.com', '321 Duong J, Ha Noi', 'Dang lam viec', 'A', 'Office Staff'),
 ('000011', 'Tran', 'Van', 'Hung', 15000000, 'hung.tran@gmail.com', '654 Duong K, Ha Noi', 'Dang lam viec', 'B', 'Office Staff'),
 ('000012', 'Le', 'Thi', 'Hong', 15000000, 'hong.le@gmail.com', '987 Duong L, Ha Noi', 'Dang lam viec', 'C', 'Office Staff');
+
+--Query 1
+SELECT 
+    PersonalID,
+    firstName,
+    middleName,
+    lastName,
+    Salary,
+    Email,
+    Address,
+    State,
+    staffType
+FROM 
+    dormitory_staff
+WHERE 
+    Dormitory_Assigned = 'A';
+
+--Query 2
+SELECT 
+    PersonalID,
+    firstName,
+    middleName,
+    lastName,
+    Salary,
+    Email,
+    Address,
+    State,
+    Dormitory_Assigned
+FROM 
+    dormitory_staff
+WHERE 
+    staffType = 'Office Staff';
