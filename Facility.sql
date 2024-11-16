@@ -172,3 +172,24 @@ INSERT INTO facility (Room_ID, itemName, Overall_Quality) VALUES
 ('204-C', 'Giường', 'Tốt'),
 ('204-C', 'Điều Hòa', 'Tốt'),
 ('204-C', 'Tủ', 'Tốt');
+
+-- Query 1:
+SELECT * FROM Facility
+WHERE Overall_Quality = 'Hỏng';
+
+-- Query 2:
+WITH ItemCount AS (
+    SELECT Room_ID, COUNT(itemName) AS item_count
+    FROM facility
+    GROUP BY Room_ID
+),
+MaxItemRooms AS (
+    SELECT Room_ID, item_count
+    FROM ItemCount
+    WHERE item_count = (SELECT MAX(item_count) FROM ItemCount)
+)
+SELECT f.Room_ID, f.itemName, f.Overall_Quality, m.item_count AS max_items
+FROM facility f
+JOIN MaxItemRooms m ON f.Room_ID = m.Room_ID;
+
+
