@@ -40,3 +40,10 @@ INSERT INTO room (Room_ID, number_of_Students, Condition_of_Room, Capacity, Gend
 ('202-C', 3, 'Trung', 5, 'Nữ', 'C'), 
 ('203-C', 1, 'Nhỏ', 3, 'Nam', 'C'),
 ('204-C', 1, 'Nhỏ', 3, 'Nữ', 'C');
+
+--Query
+SELECT *
+FROM room
+WHERE Gender = 'Nam'
+  AND Size_of_room = 'Lớn'
+  AND number_of_Students < Capacity;
