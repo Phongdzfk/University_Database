@@ -65,12 +65,18 @@ INSERT INTO Contract (ContractID, Contract_Start_Date, Contract_End_Date, Contra
 ('CT049', '2024-07-01', '2024-12-31', 'Hoat Dong', 'Phat Tien', '000007', 'SV049'),
 ('CT050', '2024-08-01', '2024-12-31', 'Hoat Dong', 'Canh Cao', '000008', 'SV050');
 
+-- Query 1
 SELECT ContractID, Contract_Start_Date, Contract_End_Date,Penalty_for_Violation,PersonalID_O, StudentID FROM Contract
-WHERE Contract_Status = 'Hoat Dong'; -- Query 1
+WHERE Contract_Status = 'Hoat Dong'; 
 
-SELECT ContractID,Contract_Start_Date, Contract_End_Date,Contract_Status,PersonalID_O, StudentID FROM Contract
-WHERE Penalty_for_Violation = 'Dinh Chi'; -- Query 2
+-- Query 2
+SELECT Student.StudentID, Student.firstName,Student.middleName, Student.Lastname, Student.Date_of_Birth,Student.Address, Student.Gender, Student.PhoneNumber, Student.EmailAddress
+FROM Student
+JOIN contract
+ON Student.StudentID = contract.StudentID
+WHERE contract.ContractID = 'CT004';
 
+-- Query 3
 SELECT ContractID,Contract_Start_Date,Contract_End_Date,Contract_Status,Penalty_for_Violation,PersonalID_O, StudentID FROM Contract
 WHERE Contract_Start_Date BETWEEN '2024-01-01' AND '2024-03-31'; -- Query 3
 
