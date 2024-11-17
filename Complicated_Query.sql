@@ -44,22 +44,24 @@ GROUP BY
 ORDER BY s.StudentID;
 
 --Query 2
-SELECT DISTINCT 
-    ds.PersonalID, 
+SELECT 
+    ds.PersonalID AS managerID, 
+    CONCAT(ds.firstname,' ',ds.middleName,' ',ds.lastName) AS managerName,
     ds.Dormitory_Assigned AS staffDormitory,
-    GROUP_CONCAT(DISTINCT dsp.phoneNumber) AS staffPhoneNumbers,
-    st.StudentID, 
+    (SELECT GROUP_CONCAT(DISTINCT phoneNumber) 
+     FROM dormitory_staff_phonenumber 
+     WHERE PersonalID = ds.PersonalID) AS staffPhoneNumbers,
+	CONCAT(st.StudentID,', ',r.Room_ID) AS Manage,
     CONCAT(st.firstname,' ',st.middleName,' ',st.lastName) AS studentName,
-    GROUP_CONCAT(DISTINCT sec.Emergency_Contact) AS student_Emegency_Contact
+	st.phoneNumber AS studentPhoneNumber,
+    (SELECT GROUP_CONCAT(DISTINCT Emergency_Contact)
+     FROM student_emegency_contact
+     WHERE StudentID = st.StudentID) AS studentEmergencyContact
 FROM dormitory_staff ds
-JOIN dormitory d ON ds.Dormitory_Assigned = d.Dormitory_ID
 JOIN live l ON l.PersonalID_DM = ds.PersonalID 
+JOIN room r ON r.Room_ID = l.Room_ID
 JOIN student st ON st.StudentID = l.StudentID
-LEFT JOIN student_emegency_contact sec ON st.StudentID = sec.StudentID
-LEFT JOIN dormitory_staff_phonenumber dsp ON ds.PersonalID = dsp.PersonalID
 WHERE ds.staffType = 'Manager'
-GROUP BY ds.PersonalID, st.StudentID
-ORDER BY ds.PersonalID, st.StudentID;
 
 --Query 3
 SELECT DISTINCT 
