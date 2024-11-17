@@ -211,3 +211,9 @@ FROM
     bill b
 WHERE 
     b.StudentID = 'SV009';
+
+--Query 4
+SELECT 
+	SUM(Amount_Due) as TotalRevenue,
+  SUM(CASE WHEN Payment_Status = 'Đã thanh toán' THEN Amount_Due ELSE 0 END) AS ActualRevenue
+FROM bill;
